@@ -1,0 +1,19 @@
+.texto {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  padding: 40px;
+  gap: 10px;
+}
+
+.loader {
+  text-align: center;
+}
