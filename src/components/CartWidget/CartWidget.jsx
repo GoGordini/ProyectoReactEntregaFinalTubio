@@ -13,7 +13,7 @@ const CartWidget = () => {
     <Link to="/cart">
       <div>
         <BsCart4 size={20} style={cartColorStyle} />
-        <span style={{ "font-size": "15px" }}>
+        <span style={{ fontSize: "15px" }}>
           {cart.length !== 0 && totalQuantity}
         </span>
       </div>

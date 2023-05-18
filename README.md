@@ -8,11 +8,15 @@ Proyecto Final del Curso React JS de CoderHouse
 
 ## Instalación
 
-En el directorio del proyecto, ejecutar en la terminal:
+### Dependencias
 
-### `npm start`
+En primer lugar, debería tener instalado Node.js. Si no fuera así, lo puede instalar desde el sitio oficial:
 
-Es necesario instalar, entre otras, las dependencias:
+```
+(https://nodejs.org)
+```
+
+El proyecto usa, entre otras, las siguientes dependencias:
 
 - Formik
 - Yup
@@ -23,10 +27,38 @@ Es necesario instalar, entre otras, las dependencias:
 - React Dom
 - React Spinner
 
-En caso de que necesite instalar una dependencia adicional, puede ejecutar en la terminal:
+Para instalar todo lo necesario, luego de clonar el repositorio debe ejecutar en la terminal:
 
-### `npm i nombreDeLaDependencia`
+### `npm install`
 
-### Deployment
+### Variables de entorno
+
+Se requieren las siguientes variables de entorno, que deben ser generadas en un archivo .env:
+
+- REACT_APP_apiKey=
+- REACT_APP_authDomain=
+- REACT_APP_projectId=
+- REACT_APP_storageBucket=
+- REACT_APP_messagingSenderId=
+- REACT_APP_appId=
+
+### Base de Datos
+
+Los documentos tienen los siguientes campos:
+
+- title
+- price
+- stock
+- description
+- category (por la cual se filtra)
+- img
+
+### Correr el proyecto
+
+Finalmente, para que el proyecto corra, ejecutar en la terminal:
+
+### `npm start`
+
+## Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
