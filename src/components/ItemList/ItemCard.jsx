@@ -22,13 +22,6 @@ const ItemCard = ({ item }) => {
         >
           {item.title}
         </Typography>
-        {/* <Typography
-          variant="body1"
-          color="text.secondary"
-          sx={{ paddingTop: 2, fontSize: 18 }}
-        >
-          {item.description}
-        </Typography> */}
         <Typography variant="body1" sx={{ paddingTop: 2, fontWeight: "bold" }}>
           <span> $ {item.price} </span>
         </Typography>

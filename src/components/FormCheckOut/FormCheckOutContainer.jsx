@@ -63,7 +63,7 @@ export const FormCheckOutContainer = () => {
     validateOnChange: false,
   });
 
-  // /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
+  // código para validar una contraseña espantosa /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
   return (
     <div className={styles.goodbye}>
       {orderId ? (

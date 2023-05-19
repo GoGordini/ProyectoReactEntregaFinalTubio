@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import styles from "./ItemList.module.css";
-//import { products } from "../../productsMock";
 import { database } from "../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
 //import useCounter from "../../utils/hooks/useCounter";
@@ -39,55 +38,17 @@ const ItemListContainer = () => {
       .catch((err) => console.log(err));
   }, [categoryName]);
 
-  // useEffect(() => {
-  //   const tarea = new Promise((resolve, reject) => {
-  //     resolve(products);
-  //   });
-
-  //   tarea.then((res) => setItems(res)).catch((error) => console.log(error));
-  // }, []);
-  // useEffect(() => {
-  //   const productsFiltered = products.filter(
-  //     (producto) => producto.category === categoryName
-  //   );
-
-  //   const tarea = new Promise((resolve, reject) => {
-  //     resolve(categoryName ? productsFiltered : products);
-  //   });
-
-  //   tarea.then((res) => setItems(res)).catch((error) => console.log(error));
-  // }, [categoryName]);
-  // if(items.length===0){
-  //   return <h2 className={styles.loader}><PulseLoader color="#36d7b7" /></h2>
-  // }
-  // Esto es un return temprano, porque nunca llega al return de abajo.
-  
-
-  // return (
-    
-  //   <div className={styles.texto}>
-  //     { items.length===0 && <h2 className={styles.loader}><PulseLoader color="#36d7b7" /></h2>}
-  //     {/* Esto es render con doble ampersen. */}
-  //     <ItemList greeting={greeting} items={items} />
-  //     {/* <h2>{counter}</h2>
-  //     <button onClick={increase}>Add</button>
-  //     <button onClick={decrease}>Remove</button>
-  //     <button onClick={reset}>Reset</button> */}
-  //   </div>
-  // );
   return (
-    
     <div className={styles.texto}>
-      {items.length===0 ? (<h2 className={styles.loader}><PulseLoader color="#36d7b7" /></h2>) : (      <ItemList greeting={greeting} items={items} />
-)}
+      {items.length === 0 ? (
+        <h2 className={styles.loader}>
+          <PulseLoader color="#36d7b7" />
+        </h2>
+      ) : (
+        <ItemList greeting={greeting} items={items} />
+      )}
     </div>
   );
-
-  //Este es el render con ternario.
 };
 
 export default ItemListContainer;
-
-// La parte previa al return es de lógica (el contenido), en JS, y se llama contenedor.
-// La parte del return es jsx. En esta parte, las cosas que vienen de JS van entre llaves. Lo que se recibe como
-// parámetro es un objeto que se denomina props. La props se envían desestructuradas.

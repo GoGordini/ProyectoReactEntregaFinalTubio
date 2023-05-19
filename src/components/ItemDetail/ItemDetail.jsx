@@ -5,15 +5,7 @@ import "./ItemDetail.css";
 
 export const ItemDetail = ({ product, onAdd, itemTotalQuantity }) => {
   return (
-    <div
-      className="detailView"
-      // style={{
-      //   display: "flex",
-      //   flexDirection: "column",
-      //   alignItems: "center",
-      //   justifyContent: "center",
-      // }}
-    >
+    <div className="detailView">
       <h3>{product.description}</h3>
       <img src={product.img} alt="foto producto" style={{ height: "200px" }} />
       <h3>${product.price}</h3>
@@ -30,15 +22,6 @@ export const ItemDetail = ({ product, onAdd, itemTotalQuantity }) => {
             <h3>Producto sin stock</h3>
           )}
         </div>
-
-        {/* <div style={{ display: "flex", justifyContent: "center" }}>
-          <button onClick={increase}>+</button>
-          {counter}
-          <button onClick={decrease}>-</button>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <button onClick={reset}>Reset</button>
-        </div> */}
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Link to={`/category/${product.category}`}>
@@ -55,4 +38,3 @@ export const ItemDetail = ({ product, onAdd, itemTotalQuantity }) => {
     </div>
   );
 };
-//export default ItemDetail;

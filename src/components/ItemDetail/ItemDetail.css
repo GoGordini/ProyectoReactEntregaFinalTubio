@@ -1,3 +1,5 @@
+/*Este archivo no es module.css porque no logré corregir el formato del toastify usando className={styles.algo}*/
+
 .detailView {
   display: flex;
   flex-direction: column;
