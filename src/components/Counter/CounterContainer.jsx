@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
 import Counter from "./Counter";
 import { CartContext } from "../../context/CartContext";
@@ -21,7 +20,7 @@ const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
   };
 
   const reiniciar = () => {
-    setCounter(1);
+    setCounter(initial);
   };
 
   return (
@@ -34,14 +33,6 @@ const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
         onAdd={onAdd}
         navigate={navigate}
       />
-      <Button
-        variant="contained"
-        size="small"
-        color="success"
-        onClick={() => navigate("/checkout")}
-      >
-        Finalizar Compra
-      </Button>
     </div>
   );
 };

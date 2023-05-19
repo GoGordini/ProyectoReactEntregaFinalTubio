@@ -1,12 +1,12 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import CounterContainer from "../Counter/CounterContainer";
-import styles from "./ItemDetail.module.css";
+import "./ItemDetail.css";
 
 export const ItemDetail = ({ product, onAdd, itemTotalQuantity }) => {
   return (
     <div
-      className={styles.detailView}
+      className="detailView"
       // style={{
       //   display: "flex",
       //   flexDirection: "column",
@@ -14,7 +14,6 @@ export const ItemDetail = ({ product, onAdd, itemTotalQuantity }) => {
       //   justifyContent: "center",
       // }}
     >
-      <h2>{product.title}</h2>
       <h3>{product.description}</h3>
       <img src={product.img} alt="foto producto" style={{ height: "200px" }} />
       <h3>${product.price}</h3>
@@ -43,7 +42,12 @@ export const ItemDetail = ({ product, onAdd, itemTotalQuantity }) => {
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Link to={`/category/${product.category}`}>
-          <Button variant="contained" size="small" color="success">
+          <Button
+            style={{ fontFamily: "Gill Sans MT" }}
+            variant="contained"
+            size="small"
+            color="success"
+          >
             VOLVER
           </Button>
         </Link>

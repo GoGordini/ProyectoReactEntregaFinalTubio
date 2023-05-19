@@ -3,7 +3,7 @@
 Proyecto Final del Curso React JS de CoderHouse
 
 ```
-(https://github.com). Poner el link de Github!
+https://github.com/GoGordini/ProyectoReactEntregaFinalTubio.git
 ```
 
 ## Instalación
@@ -13,19 +13,21 @@ Proyecto Final del Curso React JS de CoderHouse
 En primer lugar, debería tener instalado Node.js. Si no fuera así, lo puede instalar desde el sitio oficial:
 
 ```
-(https://nodejs.org)
+https://nodejs.org
 ```
 
 El proyecto usa, entre otras, las siguientes dependencias:
 
-- Formik
-- Yup
-- Firebase
+- Formik para trabajar con formularios https://formik.org/
+- Yup para validar formularios https://www.npmjs.com/package/yup
+- Firebase de Google
+  https://firebase.google.com/?hl=es
 - Material UI
-- Sweet Alert
-- Tostify
-- React Dom
-- React Spinner
+  https://mui.com/
+- Sweet Alert para alertas
+  https://sweetalert2.github.io/
+- Tostify para alertas
+  https://www.npmjs.com/package/react-toastify
 
 Para instalar todo lo necesario, luego de clonar el repositorio debe ejecutar en la terminal:
 
@@ -61,4 +63,4 @@ Finalmente, para que el proyecto corra, ejecutar en la terminal:
 
 ## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Próximamente, usando Vercel.

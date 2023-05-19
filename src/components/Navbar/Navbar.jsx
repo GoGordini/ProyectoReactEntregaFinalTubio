@@ -3,9 +3,8 @@ import styles from "./Navbar.module.css";
 import logoHappySkin from "../../assets/images/logohappyskin.png";
 import { Outlet, Link, NavLink } from "react-router-dom";
 
-
 const Navbar = () => {
-   return (
+  return (
     <div>
       <div className={styles.containerNavbar}>
         <Link to="/">
@@ -15,7 +14,7 @@ const Navbar = () => {
             alt="Logo de Happy Skin"
           />
         </Link>
-        
+
         <div className={styles.nav}>
           <NavLink
             to="/category/Guashas"
@@ -43,9 +42,8 @@ const Navbar = () => {
             SETS
           </NavLink>
         </div>
-        
+
         <CartWidget />
-        
       </div>
       <Outlet />
       {/* Esto es para pasar las props de los hijos. Se pone donde quiero renderizar los componenentes. El footer va debajo del outlet.*/}

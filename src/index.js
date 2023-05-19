@@ -14,6 +14,7 @@ const theme = createTheme({
     },
     success: {
       main: "#cdfcf6",
+      secondary: "transparent",
     },
   },
 });

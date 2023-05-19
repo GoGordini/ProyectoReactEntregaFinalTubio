@@ -7,6 +7,7 @@ import { database } from "../../firebaseConfig";
 import { CartContext } from "../../context/CartContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./ItemDetail.css";
 //import useCounter from "../../utils/hooks/useCounter";
 
 export const ItemDetailContainer = () => {
@@ -37,7 +38,8 @@ export const ItemDetailContainer = () => {
     };
 
     addToCart(data);
-    toast.success("Producto agregado con éxito", {
+    toast.success("¡PRODUCTO AGREGADO AL CARRITO!", {
+      className: "Toastify__toast-theme--colored.Toastify__toast--success",
       position: "top-right",
       autoClose: 1000,
       hideProgressBar: true,

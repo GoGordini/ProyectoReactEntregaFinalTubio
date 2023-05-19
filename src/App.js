@@ -7,7 +7,6 @@ import CartContainer from "./components/Cart/CartContainer";
 import styles from "./App.module.css";
 //import { PropagateLoader } from "react-spinners";
 import CartContextProvider from "./context/CartContext";
-import "react-toastify/dist/ReactToastify.css";
 import { FormCheckOutContainer } from "./components/FormCheckOut/FormCheckOutContainer";
 import FooterContainer from "./components/Footer/FooterContainer";
 

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FormCheckOut } from "./FormCheckOut";
-
+import styles from "./FormCheckOut.module.css";
 import { useFormik } from "formik";
 import { database } from "../../firebaseConfig";
 import * as Yup from "yup";
@@ -33,10 +33,11 @@ export const FormCheckOutContainer = () => {
     //updateDoc hace un patch.
     clearCart();
   };
-  console.log(orderId);
-  const { handleSubmit, handleChange, errors, values } = useFormik({
+  const { handleSubmit, handleChange, errors, values, isValid } = useFormik({
     initialValues: {
       nombre: "",
+      apellido: "",
+      confirmarEmail: "",
       email: "",
       telefono: "",
     },
@@ -46,9 +47,13 @@ export const FormCheckOutContainer = () => {
         .required("Este campo es obligatorio")
         .min(3, "El nombre debe tener al menos 3 caracteres")
         .max(20, "El nombre no puede superar los 20 caracteres"),
+      apellido: Yup.string().required("Este campo es obligatorio"),
       email: Yup.string()
         .email("El campo debe ser un email")
         .required("Este campo es obligatorio"),
+      confirmarEmail: Yup.string()
+        .required("Este campo es obligatorio")
+        .oneOf([Yup.ref("email")], "Los e-mails ingresados no coinciden"),
       telefono: Yup.string()
         .required("Este campo es obligatorio")
         .matches(/^\d{7,}$/, {
@@ -60,15 +65,20 @@ export const FormCheckOutContainer = () => {
 
   // /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
   return (
-    <div>
+    <div className={styles.goodbye}>
       {orderId ? (
-        <h1>¡Gracias por su compra! Su número de orden es {orderId}</h1>
+        <>
+          {" "}
+          <h1>¡Gracias por su compra! </h1>
+          <h3>Su código de orden es {orderId}</h3>
+        </>
       ) : (
         <FormCheckOut
           errors={errors}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           values={values}
+          isValid={isValid}
         />
       )}
     </div>
